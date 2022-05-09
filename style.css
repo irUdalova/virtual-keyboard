@@ -88,15 +88,24 @@ h1 {
     display: none;
 }
 
-.arrow-button {
-    max-width: 40px;
-    width: 100%;
+.shifted .key-button__shifted {
+    display: inline;
+
+} 
+
+.shifted .key-button__key {
+    display: none;
+}
+
+.capslocked .dynamic-row .key-button {
+    text-transform: uppercase;
+}
+
+.arrow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 20px;
-    background-color: #495464;
-    color: #f4f4f2;
-    border-radius: 5px;
-    transform: scale(1);
-    transition: all 0.3s;
 }
 
 .up-down-btn {
@@ -121,9 +130,10 @@ h1 {
 }
 
 .key-button:active,
-.arrow-button:active {
+.key-button.pressed {
     transform: scale(0.97);
     transition: transform 0.3s;
+    background-color: #6c7586;
 }
 
 .delete-btn,
@@ -150,7 +160,6 @@ h1 {
 .space-btn {
     max-width: 224px;
 }
-
 
 .control-btn, 
 .option-btn,
